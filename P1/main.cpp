@@ -391,19 +391,176 @@ int main()
 
     // Problema 6
 
-    int N=0;
-       cout<<"Ingrese la cantidad de terminos: ";
-       cin>>N;
-       int Mul=1, Con=1;
-       float A=1, B=1, tot1=0, tot=1;
-       while (Con<N){
-           B*=Mul;
-           tot1=A/B;
-           Mul+=1;
-           tot+=tot1;
-           Con+=1;
-       }
-       cout<<tot<<endl;
+//    int num_terminos=0;
+//       cout<<"Ingrese la cantidad de terminos para aproximar e: ";
+//       cin>>num_terminos;
+//       int multp=1, cont=1;
+//       float aux1=1, aux2=1, total2=0, total1=1;
+//       while (cont<num_terminos){
+//           aux2*=multp;
+//           total2=aux1/aux2;
+//           multp+=1;
+//           total1+=total2;
+//           cont+=1;
+//       }
+//       cout<<"\n"<<total1<<endl;
+
+    // Problema 8
+
+//    int A=0, B=0, N=0;
+//    int cont=1, multp=0, suma=0;
+//    cout<<"Ingrese el primer numero: ";
+//    cin>>A;
+//    cout<<"\nIngrese el segundo numero: ";
+//    cin>>B;
+//    cout<<"\nIngrese el numero del cual tienen que ser menor sus multiplos: ";
+//    cin>>N;
+//    multp= A*cont;
+//    while (multp<N){
+//        suma+=multp;
+//        cout<<multp;
+//        cont+=1;
+//        multp= A*cont;
+//        if (multp<N){
+//            cout<<" + ";
+//        }
+
+//    }
+//    cont=1;
+//    multp= B*cont;
+//    if ((suma!=0)&&(multp<N)&&(multp%A!=0)){
+//        cout<<" + ";
+//    }
+//    if ((multp<N)&&(multp%A!=0)){
+//        cout<<multp;
+//        suma+=multp;
+//        cont+=1;
+//    }
+//    multp= B*cont;
+//    while (multp<N){
+//        if (multp%A!=0){
+//            suma+=multp;
+//            cout<<" + "<<multp;
+//        }
+//        cont+=1;
+//        multp= B*cont;
+//    }
+//    cout<<"\n = "<<suma<<endl;
+
+    // Problema 10
+
+//    int N=0;
+//    cout<<"Ingrese la posicion del numero primo que desea visualizar: ";
+//    cin>>N;
+//    int divisor=2, cont1=2, cont2=1;
+//    while (divisor<=cont1){
+//        if (cont1%divisor==0){
+//            if (divisor==cont1){
+//                if (N==cont2){
+//                    cout<<cont1<<endl;
+//                    break;
+
+//                }
+//                else{
+//                    cont1+=1;
+//                    divisor=2;
+//                    cont2+=1;
+//                }
+//            }
+//            else{
+//                cont1+=1;
+//                divisor=2;
+//            }
+//        }
+//        else{
+//            divisor+=1;
+//        }
+//    }
+
+    // Problema 12
+
+//    int N=0;
+//    cout<<"Ingrese el numero N del cual busca el maximo factor primo: ";
+//    cin>>N;
+//    int contp=2, fa=0, contd=2;
+//    while (contp<=N){
+//        if (contp%contd==0){
+//            if (contd==contp){
+//                if (N%contp==0){
+//                    fa=contp;
+//                    contd=2;
+//                    contp+=1;
+//                }
+//                else{
+//                    contd=2;
+//                    contp+=1;
+//                }
+
+//            }
+//            else{
+//                contp+=1;
+//                contd=2;
+//            }
+//        }
+//        else{
+//            contd+=1;
+//        }
+
+//    }
+//    cout<<fa<<endl;
+
+    // Problema 14
+
+//    int pn=100, sn=100, resul=0, aux=0, sf=0, r=0, mp=0, mpn=0, spn=0;
+//    while (pn<1000){
+//        while (sn<1000){
+//            resul=pn*sn;
+//            aux=resul;
+//            while (aux!=0){
+//                r=aux%10;
+//                aux/=10;
+//                sf=(sf*10)+r;
+//            }
+//            if (sf==resul){
+//                if (resul>mp){
+//                    mp=resul;
+//                    mpn=pn;
+//                    spn=sn;
+//                }
+//            }
+//            sf=0;
+//            sn+=1;
+//        }
+//        pn+=1;
+//        sn=pn;
+//    }
+//    cout<<mpn<<" * "<<spn<<" = "<<mp<<endl;
+
+    // Problema 16
+
+//    int N=0;
+//    cout<<"Ingrese el numero N, del cual van a partir las semillas: ";
+//    cin>>N;
+//    int resul=0, contr=1, semilm=0, contm=0;
+//    for(int i=N; i>1 ;i--){
+//        while (N!=1){
+//            if (N%2==0){
+//                N/=2;
+//                contr+=1;
+//            }
+//            else if (N%2!=0){
+//                N=(N*3)+1;
+//                contr+=1;
+//            }
+//        }
+//        if (contr>contm){
+//            contm=contr;
+//            semilm=i;
+//        }
+//        N=i-1;
+//        contr=1;
+//    }
+//    cout<<"La serie mas larga es con la semilla "<<semilm<<" teniendo "<<contm<<" terminos"<<endl;
 
 
 
