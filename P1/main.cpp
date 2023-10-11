@@ -333,7 +333,7 @@ int main()
 
 //    int lista[]={50000,20000,10000,5000,2000,1000,500,200,100,50,0},dinero,aux;
 
-//    cout<<"Ingrese el dinero: ";cin>>dinero;
+//    cout<<"Ingrese la cantiad de dinero: ";cin>>dinero;
 //    aux=dinero;
 
 //    for(int i=0;lista[i]!=0;i++){
@@ -449,14 +449,14 @@ int main()
 
     // Problema 10
 
-//    int N=0;
+//    int numero=0;
 //    cout<<"Ingrese la posicion del numero primo que desea visualizar: ";
-//    cin>>N;
+//    cin>>numero;
 //    int divisor=2, cont1=2, cont2=1;
 //    while (divisor<=cont1){
 //        if (cont1%divisor==0){
 //            if (divisor==cont1){
-//                if (N==cont2){
+//                if (numero==cont2){
 //                    cout<<cont1<<endl;
 //                    break;
 
@@ -478,90 +478,65 @@ int main()
 //    }
 
     // Problema 12
+    //cont1: 2 - numero y cont2: 2 - verifica si es primo y en el if ayuda a ver si es div de num
+    // div - fact primo - pasa a factor
+    //
 
-//    int N=0;
-//    cout<<"Ingrese el numero N del cual busca el maximo factor primo: ";
-//    cin>>N;
-//    int contp=2, fa=0, contd=2;
-//    while (contp<=N){
-//        if (contp%contd==0){
-//            if (contd==contp){
-//                if (N%contp==0){
-//                    fa=contp;
-//                    contd=2;
-//                    contp+=1;
-//                }
-//                else{
-//                    contd=2;
-//                    contp+=1;
-//                }
+    int numero=0;
+    cout<<"Ingrese un numero para buscar su maximo factor primo: ";
+    cin>>numero;
+    int cont1=2, factor=0, cont2=2;
+    while (cont1<=numero){
+        if (cont1%cont2==0){
+            if (cont1==cont2){
+                if (numero%cont1==0){
+                    factor=cont1;
+                    cont2=2;
+                    cont1+=1;
+                }
+                else{
+                    cont2=2;
+                    cont1+=1;
+                }
 
-//            }
-//            else{
-//                contp+=1;
-//                contd=2;
-//            }
-//        }
-//        else{
-//            contd+=1;
-//        }
+            }
+            else{
+                cont1+=1;
+                cont2=2;
+            }
+        }
+        else{
+            cont2+=1;
+        }
 
-//    }
-//    cout<<fa<<endl;
-
-    // Problema 14
-
-//    int pn=100, sn=100, resul=0, aux=0, sf=0, r=0, mp=0, mpn=0, spn=0;
-//    while (pn<1000){
-//        while (sn<1000){
-//            resul=pn*sn;
-//            aux=resul;
-//            while (aux!=0){
-//                r=aux%10;
-//                aux/=10;
-//                sf=(sf*10)+r;
-//            }
-//            if (sf==resul){
-//                if (resul>mp){
-//                    mp=resul;
-//                    mpn=pn;
-//                    spn=sn;
-//                }
-//            }
-//            sf=0;
-//            sn+=1;
-//        }
-//        pn+=1;
-//        sn=pn;
-//    }
-//    cout<<mpn<<" * "<<spn<<" = "<<mp<<endl;
+    }
+    cout<<factor<<endl;
 
     // Problema 16
 
-//    int N=0;
-//    cout<<"Ingrese el numero N, del cual van a partir las semillas: ";
-//    cin>>N;
-//    int resul=0, contr=1, semilm=0, contm=0;
-//    for(int i=N; i>1 ;i--){
-//        while (N!=1){
-//            if (N%2==0){
-//                N/=2;
-//                contr+=1;
+//    int numero=0;
+//    cout<<"Ingrese el numero del cual van a partir las semillas: ";
+//    cin>>numero;
+//    int cont1=1, semilla=0, cont2=0;
+//    for(int i=numero; i>1 ;i--){
+//        while (numero!=1){
+//            if (numero%2==0){
+//                numero/=2;
+//                cont1+=1;
 //            }
-//            else if (N%2!=0){
-//                N=(N*3)+1;
-//                contr+=1;
+//            else if (numero%2!=0){
+//                numero=(numero*3)+1;
+//                cont1+=1;
 //            }
 //        }
-//        if (contr>contm){
-//            contm=contr;
-//            semilm=i;
+//        if (cont1>cont2){
+//            cont2=cont1;
+//            semilla=i;
 //        }
-//        N=i-1;
-//        contr=1;
+//        numero=i-1;
+//        cont1=1;
 //    }
-//    cout<<"La serie mas larga es con la semilla "<<semilm<<" teniendo "<<contm<<" terminos"<<endl;
-
+//    cout<<"La serie mas larga es con la semilla "<<semilla<<" teniendo "<<cont2<<" terminos"<<endl;
 
 
     return 0;
